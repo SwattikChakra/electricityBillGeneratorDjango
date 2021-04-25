@@ -8,6 +8,8 @@
 </head>
 <body>
     <button><a href="{% url 'bill:index'%}">Back</a></button>
+    <button><a href="{% url 'bill:delete' bill.id%}">Delete</a></button>
+    <button><a href="{% url 'bill:update' bill.id%}">Edit</a></button>
 
     <h1>Customer Name: <span style="color:green">{{bill.customer_name}}</span></h1>
     <h3>Generated On: <span style="color:green">{{bill.generated_on}}</span></h3>

@@ -10,7 +10,7 @@ class Bill(models.Model):
     image_of_meter = models.ImageField(upload_to="images/")
 
     def __str__(self):
-        return self.item_name
+        return self.customer_name
 
     def get_absolute_url(self):
         return reverse("bill:detail", kwargs={"pk": self.pk})

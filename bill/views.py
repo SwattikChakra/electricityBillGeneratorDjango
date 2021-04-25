@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Bill
+from django.urls import reverse_lazy
 
 # Create your views here.
 class IndexView(generic.ListView):
@@ -20,3 +21,15 @@ class AddView(generic.CreateView):
     model = Bill
     template_name = "bill/add.html"
     fields = "__all__"
+
+
+class UpdateView(generic.UpdateView):
+    model = Bill
+    template_name = "bill/add.html"
+    fields = "__all__"
+
+
+class DeleteView(generic.DeleteView):
+    model = Bill
+    template_name = "bill/delete.html"
+    success_url = reverse_lazy("bill:index")
