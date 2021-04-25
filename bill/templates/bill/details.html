@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Details</title>
+</head>
+<body>
+    <button><a href="{% url 'bill:index'%}">Back</a></button>
+
+    <h1>Customer Name: <span style="color:green">{{bill.customer_name}}</span></h1>
+    <h3>Generated On: <span style="color:green">{{bill.generated_on}}</span></h3>
+    <h3>Amount Payable: <span style="color:green">Rs. {{bill.amount_payable}}</span></h3>
+    <h3>Total Units Consumed:  <span style="color:green">{{bill.total_units_consumed}}</span></h3>
+    <img src="{{bill.image_of_meter.url}}" alt="" style="height: 500px; float: left; ">
+</body>    
+
+</html>

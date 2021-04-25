@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index View</title>
+</head>
+<body>
+    <h2>List of All Bills</h2>
+    {% if bills_list %}
+    <ul>
+    {% for bill in bills_list %}
+        <li>
+            <a href="{% url 'bill:detail' bill.id %}">{{bill.customer_name}}</a>
+        </li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <h1>No bills</h1>
+    {% endif %}
+    <button><a href="{% url 'bill:add'%}" style="height: 2rem;width:2rem;">Add Item</a></button>
+</body>
+</html>
