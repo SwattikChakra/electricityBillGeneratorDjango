@@ -1,4 +1,12 @@
+<style>
+
+    body {background-color: black;}
+    h2   {color:whitesmoke;}
+    p    {color: white;}
+</style>
+<body>
 <form method="post">{% csrf_token %}
     <h2>Are you sure you want to delete {{ object }}'s Bill ?</h2>
     <input type="submit" value="Confirm">
 </form>
+</body>

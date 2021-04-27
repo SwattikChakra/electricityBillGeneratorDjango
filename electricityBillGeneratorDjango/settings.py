@@ -78,8 +78,8 @@ WSGI_APPLICATION = "electricityBillGeneratorDjango.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "db_psql",
-        "USER": "djangouser",
+        "NAME": "myproject",
+        "USER": "myprojectuser",
         "PASSWORD": "password",
         "HOST": "localhost",
         "PORT": "",
